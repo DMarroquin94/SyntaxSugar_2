@@ -1,0 +1,15 @@
+{
+  "name": "mootools",
+  "homepage": "https://github.com/mootools/mootools-core",
+  "version": "1.4.5",
+  "_release": "1.4.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.4.5",
+    "commit": "d50cc3068bf76559f45d07eb756b988681270fbd"
+  },
+  "_source": "git://github.com/mootools/mootools-core.git",
+  "_target": "~1.4.5",
+  "_originalSource": "mootools",
+  "_direct": true
+}
