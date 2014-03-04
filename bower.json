@@ -27,6 +27,7 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "bootstrap": "~3.1.1",
-    "mootools": "~1.4.5"
+    "mootools": "~1.4.5",
+    "express": "*"
   }
 }

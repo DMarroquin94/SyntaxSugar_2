@@ -1,0 +1,13 @@
+{
+  "name": "node",
+  "homepage": "https://github.com/joyent/node",
+  "version": "0.11.11",
+  "_release": "0.11.11",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.11.11",
+    "commit": "5ae698fc47430d33152ff52ab39da12b77e7208a"
+  },
+  "_source": "git://github.com/joyent/node.git",
+  "_target": "*"
+}
