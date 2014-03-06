@@ -50,47 +50,6 @@ button {
   font-family: Georgia;
   position: absolute;
 }
-blockquote {
-  margin: 0 0 20px;
-  border-left: 5px solid #bbb;
-  color: black;
-  width: 100%;
-  text-align: center;
-  padding: 30px 30px;
-  font-style: italic;
-  font-size: 22px;
-  background: #EBEBEB;
-  position: relative;
-}
-blockquote:before {
-  content: open-quote;
-  top: 0;
-  left: 0;
-  color: gray;
-  font-size: 90px;
-  font-family: Georgia;
-  position: absolute;
-}
-blockquote:after {
-  content: close-quote;
-  color: gray;
-  font-size: 90px;
-  font-family: Georgia;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-@media (min-width: 768px) {
-  
-}
-@media (min-width: 992px) {
-  blockquote {
-    font-size: 27px;
-  }
-}
-@media (min-width: 1200px) {
-  
-}
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -103,22 +62,6 @@ img.behind {
   margin: 0 auto;
   position: relative;
   display: block;
-}
-#first-slide {
-  background: url('../images/bg5.jpg');
-  background-position: 0 -11em;
-  position: absolute;
-  top: 0;
-}
-@media (min-width: 992px) {
-  #first-slide {
-    background-position: 0 -13em;
-  }
-}
-#second-slide {
-  background: url('../images/scenery/explore.jpg');
-  background-size: cover;
-  background-position: 0 0em;
 }
 .depth {
   display: block;
@@ -148,12 +91,6 @@ img.behind {
 .depth:after {
   top: 2px;
   left: 2px;
-}
-.section {
-  border-top: 4.2em solid #181919 !important;
-}
-#tec-specs.section {
-  border-top: 4.2em solid #104c89 !important;
 }
 .navbar-nav {
   margin: 0;
@@ -281,16 +218,6 @@ button.circle:hover {
   text-shadow: 6px 0px 5px rgba(0, 0, 0, 0.9);
   bottom: 0 !important;
 }
-.modal-backdrop,
-.modal-backdrop.fade.in {
-  background: #181919;
-}
-.modal {
-  color: #65a5ec;
-}
-.modal-title h4 {
-  font-size: 23px;
-}
 .header {
   color: #65a5ec;
 }
@@ -325,35 +252,10 @@ button.circle:hover {
 .hero-product img {
   float: right;
 }
-.product {
-  text-align: center;
-}
-.padding-btm {
-  padding-bottom: 30px;
-}
-#ProductPlace p {
-  font-size: .64em;
-  font-weight: bold;
-}
-#ProductPlace button {
-  padding: 2px 20px !important;
-  border: 1px solid white;
-  background: #24b5cc;
-  border-radius: 25px;
-}
-#ProductPlace button:hover {
-  color: black;
-}
 #Main {
   font-size: 1em;
   color: black;
   padding-bottom: 1em;
-}
-.corporate {
-  margin-bottom: 40px;
-}
-.float-right {
-  float: right;
 }
 .search-bar {
   background: #dddcdc;
@@ -381,19 +283,8 @@ button.circle:hover {
   max-height: 500px;
   height: 495px;
 }
-.carousel-inner {
-  max-height: 500px;
-  height: 495px;
-  position: relative;
-  background: url('../images/bg5.jpg');
-  backround-size: cover;
-  background-position: 0 -11em;
-}
 .pad-left {
   padding: 30px 0 10px 65%;
-}
-.blue {
-  color: #ffee60 !important;
 }
 em {
   color: #65a5ec;
@@ -401,111 +292,16 @@ em {
 .sticky {
   height: 2em;
 }
-.call-action {
-  border-radius: 350px !important;
-  padding: 61px 26px;
-  font-size: 23px;
-}
-.social {
-  float: right;
-  padding: 10px 15px;
-}
-.social img {
-  height: 27px;
-  max-width: 45px;
-}
-.pin {
-  padding: 14px 15px;
-}
-.pin img {
-  height: 18px;
-  width: 45px;
-}
-.pic-detail,
-.pic-detail p {
-  margin: 8em auto 0;
-  font-size: 12px !important;
-  height: 6em;
-  text-align: center;
-}
-.pic-detail a,
-.pic-detail p a {
-  background: #404745;
-  height: 7.5em;
-  border-radius: 80px;
-  padding: 100px 30px 30px;
-}
-.pic-detail span,
-.pic-detail p span {
-  font-size: 7em;
-  margin-top: -60px;
-}
-@media (min-width: 768px) {
-  
-}
-@media (min-width: 992px) {
-  
-}
-@media (min-width: 1200px) {
-  width: 360px;
-  height: 240px;
-}
-.details {
-  background: #f1ebdb;
-  padding: 16px;
-  min-height: 150px;
-  font-size: 12px !important;
-  margin-top: .9em;
-}
 #footer {
   background: #181919;
   width: 100%;
   padding: 1em 0 1em;
   height: 7em;
 }
-.testi-right {
-  height: 292px;
-}
-.test-pic {
-  width: 400px;
-  height: 292px;
-}
-.testi-right img {
-  float: right;
-  margin-left: 60px;
-}
-.testi-left {
-  height: 292px;
-}
-.testi-left img {
-  float: left;
-  margin-right: 60px;
-}
-.hand {
-  font-family: 'Rock Salt';
-}
-.yummy {
-  background: url('../realimages/yummy.jpg');
-  background-size: cover;
-  margin-bottom: 1em;
-  background-position: 0px -140px;
-}
-.robbins {
-  background: url('../realimages/baskin-robbins.jpg');
-  background-size: cover;
-  margin-bottom: 1em;
-}
 .white {
   background: #f1ebdb;
   text-align: center;
   margin: 0;
-}
-.pink {
-  background: pink;
-  padding: 10px;
-}
-.modal-footer {
-  margin-top: 0;
 }
 .mine {
   position: relative;
@@ -543,13 +339,8 @@ em {
   background: #f1ebdb;
   width: 100%;
 }
-@media (min-width: 1199px) {
-  
-}
-@media (max-width: 1199px) {
-  .mine2 > li:first-child {
-    margin-top: 3.82em;
-  }
+.mine2 > li:first-child {
+  margin-top: 3.82em;
 }
 @media (max-width: 1199px) {
   
@@ -585,291 +376,53 @@ em {
 @media (min-width: 1200px) {
   margin: 0 auto;
 }
-.centerImportant {
-  float: none !important;
-  margin: 0 auto !important;
-}
-.navbar-nav > li > a {
-  float: none !important;
-}
-#home2 {
-  background: url('../images/use_your_illusion.png');
-}
-.graphics {
-  width: 100%;
-  background: url('../images/scenery/night.png') no-repeat;
-  background-position: 0 -29em;
-  color: #65a5ec;
-  background-color: #104c89;
-}
-.tec-specs {
-  width: 100%;
-  border-top: 4.2em solid #181919 !important;
-  color: #104c89;
-  background-color: #65a5ec;
-}
-.box-info-left {
-  width: 100%;
-  height: 22em;
-  background: #404745;
-  float: none;
-}
-@media (min-width: 768px) {
-  
-}
-@media (min-width: 992px) {
-  .box-info-left {
-    width: 750px;
-    height: 22em;
-    background: #404745;
-    float: none;
-  }
-}
-@media (min-width: 1200px) {
-  .box-info-left {
-    width: 750px;
-    height: 22em;
-    background: #404745;
-    float: none;
-  }
-}
-.picture {
-  background: url('../images/interface.jpg');
-  background-size: cover;
-  width: 100%;
-  height: 12em;
-  left: 0;
-  right: auto;
-  top: 0;
-}
-@media (min-width: 768px) {
-  
-}
-@media (min-width: 992px) {
-  
-}
-@media (min-width: 1200px) {
-  .picture {
-    position: absolute;
-    background-size: cover;
-    top: -20em;
-    right: 15em;
-    left: auto;
-    width: 650px;
-    height: 20em;
-    background-position: 0px -70px;
-  }
-}
 .wrapper {
   width: 100%;
   min-height: 423px;
   position: relative;
   color: #a6cdf9;
 }
-.dark-content {
-  background: #104c89;
-  padding: 1.5em 3em .5em;
-}
-@media (min-width: 992px) {
-  .dark-content {
-    padding: 3em 10em 2em;
-  }
-}
-@media (min-width: 1200px) {
-  .dark-content {
-    padding: 1em 38em 2em;
-  }
-}
-.full-header {
-  text-align: center;
-}
-.full-header h3 {
-  padding-top: .3em;
-  margin-top: 0;
-  font-size: 2em;
-}
-#graphics .full-header {
-  background: #104c89;
-  margin-bottom: 22em;
-}
-#graphics .full-header h3 {
-  color: #a6cdf9;
-}
-#tec-specs .full-header {
-  background: #181919;
-  color: #f1ebdb;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: .5em 0 .001em;
-}
-p.emphasis {
-  font-size: 2.4em !important;
-  color: #f1ebdb !important;
-}
-/** Third section **/
-.block {
-  width: 100%;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  
-}
-@media (min-width: 992px) {
-  
-}
-@media (min-width: 1200px) {
-  width: 590px;
-}
-#headset-prime,
-#glove-prime {
-  float: none;
-  height: 200px;
-  width: auto;
-  margin: 0 auto;
-  display: block;
-}
-@media (min-width: 768px) {
-  
-}
-@media (min-width: 992px) {
-  #headset-prime,
-  #glove-prime {
-    height: 280px;
-    max-width: 350px;
-    display: block;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1200px) {
-  #headset-prime,
-  #glove-prime {
-    height: 350px;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-.thumbnail {
-  width: 80px;
-  height: 80px;
-  display: inline;
-  float: none;
-  cursor: pointer;
-}
-.future-tec {
-  background: url('../images/use_your_illusion.png');
-  padding: 1em 0;
-  height: auto;
-  color: #a6cdf9;
-  font-size: 20px;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .future-tec {
-    padding: 2em 1em;
-    height: auto;
-    min-height: 400px;
-  }
-}
-@media (min-width: 992px) {
-  .future-tec {
-    padding: 2em 4em;
-    height: auto;
-  }
-}
-.col-xs-12 {
-  text-align: center;
-  font-size: 18px;
-}
-.wrapper3 {
-  width: 600px;
-  height: 80px;
-  margin: 0 auto;
-}
-/** Shop page **/
-#shop-page {
-  background: #181919;
-}
-#bundle:before {
-  display: none;
-}
-@media (min-width: 768px) {
-  #bundle:before {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  #bundle:before {
-    display: block;
-    height: 160px !important;
-    width: 160px;
-    padding: 39px 20px;
-    font-size: 31px;
-    position: absolute;
-    border: 3px solid #65a5ec;
-    border-radius: 150px;
-    background: #f1ebdb;
-    content: 'Bundle Sale';
-    padding: 30px 20px;
-    text-align: center;
-    top: -20px;
-    left: -20px;
-    color: #65a5ec;
-  }
-}
-.pic-product {
-  max-width: 100%;
-  display: block;
-  background: #104c89;
-  float: none;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  .pic-product {
-    float: none;
-    margin-right: 5em;
-  }
-}
-@media (min-width: 992px) {
-  .pic-product {
-    max-width: 500px;
-    max-height: 500px;
-    float: left;
-  }
-}
-.section.shop {
-  padding-top: 4.2em;
-  background: url('../images/use_your_illusion.png');
-  border-top: 0 !important;
-}
-.shop .container {
-  margin-top: 2.5em;
-  padding: 0 1em 2em;
-}
-.store {
-  background: #f1ebdb;
-  min-height: 20em;
-}
-.store > .row {
-  margin-right: 0;
-  margin-left: 0;
-}
-.product {
-  margin-bottom: 2em;
-  padding-top: 2em;
-  position: relative;
-}
 /** Modal Section **/
-.modal-header {
-  background: white;
+#responsive {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
 }
-.modal-body {
-  background: #f1ebdb;
+.modal-header {
+  border-bottom: 0px;
+  text-align: center;
+}
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  background: black;
+}
+.modal {
+  color: #65a5ec;
+}
+@media (min-width: 768px) {
+  
+}
+@media (min-width: 992px) {
+  .modal {
+    top: 38%;
+  }
+}
+@media (min-width: 1200px) {
+  
+}
+.modal-title h4 {
+  font-size: 23px;
+}
+.modal-footer {
+  margin-top: 0;
+  border-top: 0;
+}
+#insert > div {
+  margin-top: 1em;
 }
 /** Cart Section **/
-#cart {
-  margin: 0 15px;
-  float: left;
-}
 .added {
   font-size: 14px;
   color: #5cb85c;
@@ -884,83 +437,7 @@ p.emphasis {
   opacity: 1;
   line-height: 4;
 }
-.total {
-  font-size: 25px;
-  float: right;
-  padding-right: 15px;
-}
-#total {
-  font-size: 21px !important;
-}
-.pic {
-  width: 100%;
-}
-.pic img {
-  max-width: 344px;
-  float: left;
-  margin: 0 1em 1em 0em;
-}
 /** Home stuff **/
-#sight .details {
-  background: url();
-}
-#ipicture {
-  background: url('../images/HeadSets/headgear.jpg');
-  background-position: 0em 0em;
-  background-size: 103%;
-}
-@media (min-width: 768px) {
-  #ipicture {
-    background-position: 0em -11em;
-    background-size: 103%;
-  }
-}
-@media (min-width: 992px) {
-  #ipicture {
-    background-position: 0;
-    background-size: 103%;
-  }
-}
-#itouch {
-  background: url('../images/Gloves/front_glove.png');
-  background-color: #ebe8e8;
-  background-position: 2em -4em;
-  background-size: 85%;
-}
-@media (min-width: 768px) {
-  #itouch {
-    background-position: 4em -13em;
-  }
-}
-@media (min-width: 992px) {
-  #itouch {
-    background-position: 2em -5em;
-  }
-}
-#isound {
-  background: url('../images/HeadSets/soundset.jpg') no-repeat;
-  background-color: #ebe8e8;
-  background-position: cover;
-  background-position: 3em -3em;
-  background-size: 87%;
-}
-@media (min-width: 768px) {
-  #isound {
-    background-position: 5em -19em;
-  }
-}
-@media (min-width: 992px) {
-  #isound {
-    background-size: 64%;
-    background-position: 5em 0;
-  }
-}
-.product p {
-  font-size: 14px;
-}
-#ult-tec {
-  padding: .3em 0 .2em !important;
-}
 footer li {
   color: #404745;
 }
@@ -980,6 +457,11 @@ li > h3 {
   margin: 0;
   margin-bottom: .1em;
   margin-top: -0.4em;
+}
+/** Gallery Section **/
+.galley {
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 /** Do not use. Copy and paste for MOBILE FIRST **/
 @media (min-width: 768px) {
