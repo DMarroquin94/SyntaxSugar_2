@@ -1,0 +1,128 @@
+header {
+}
+
+.container {
+	border: 2px solid black;
+	
+}
+
+.logo {
+	
+}
+
+ ul  {
+ 	float: right;
+	list-style-type: none;
+	margin-right: 2%;
+}
+
+li  {
+	float: left;
+	padding: 0px;
+	margin: 5px;
+
+}
+
+body {
+
+}
+h2 {
+	text-align: center;
+	
+
+}
+#home-image {
+	border: 2px solid black;
+
+	height: 300px;
+	margin-top: 5px;
+	margin-bottom: 5px
+}
+
+#logo {
+	float: left;
+}
+
+#about-us {
+	
+height: auto;
+	
+
+	
+}
+
+#about-content {
+	position: relative;
+	
+	margin-top: 5px;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+#about-img {
+	border: 2px solid black;
+	height: 225px;
+}
+
+#about-text-wrap p {
+		display: inline;
+}
+
+#gallary {
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.gallary-thumbnail {
+	border: 2px solid black;
+	height: 100px;
+	
+	
+}
+
+.gallary-arrow {
+	height: 75px;
+	
+}
+
+.glyphicon-chevron-left {
+	font-size: 70px;
+}
+
+.glyphicon-chevron-right {
+	font-size: 70px;
+}
+
+#body {
+
+}
+
+#footer {
+	height: auto;
+
+}
+
+#social-icons h3{
+	
+}
+
+.glyphicon {
+	margin-top: 10px
+}
+
+.col-sm-10 {
+	margin: 1, auto;
+}
+
+#media-icons {
+	
+}
+
+h3 {
+	text-align: center;
+}
+
+#body-request {
+	margin-top: 20px;
+}
