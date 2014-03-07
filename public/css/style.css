@@ -77,13 +77,10 @@ height: auto;
 .gallary-thumbnail {
 	border: 2px solid black;
 	height: 100px;
-	
-	
 }
 
 .gallary-arrow {
 	height: 75px;
-	
 }
 
 .glyphicon-chevron-left {
@@ -122,7 +119,16 @@ height: auto;
 h3 {
 	text-align: center;
 }
-
 #body-request {
-	margin-top: 20px;
+
+	margin-top: 50px;
+	height: auto;
+}
+
+#request-button {
+	float: right;
+}
+
+#request-form {
+	margin: 0, auto;
 }

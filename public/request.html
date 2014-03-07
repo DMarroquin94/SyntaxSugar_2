@@ -14,7 +14,7 @@
   <link href="css/bootstrap-modal.css" rel="stylesheet">
   <link href="../css/custom.css" rel="stylesheet"> 
 
-    <link href="home-style/style.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet"> 
 
   </head>
 
@@ -50,44 +50,18 @@
   </header>
 
   <div id="body-request">
-    <h1>Request Form</h1>
-    <div id="about-us" class="container">
-      <h2>About Us</h2>
-      <div id="about-content" class="row">
-      
-      <div class="row"> 
-         <p>
-            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum." 
-          </p>
-      </div>
-
-       <div class="row">
-        <p>
-       </div> 
-
-        <div class="row">
-          <div id="about-img" class="col-lg-4  col-md-4 col-sm-12 img-responsive">
-
-          </div>
-          <div id="about-text-wrap" class="col-lg-8 col-md-8 col-sm-12 ">
-            <p>
-              embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to genera
-            </p> 
-
-            <p>
-               1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was pop
-            </p>
-
-            <p>
-               tecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam.
-            </p>           
-          </div>
-        </div>
-
-          <p class="row">
-               piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up on
-            </p> 
-      </div>
+    
+    <div id="request" class="container">
+  
+     <h2>Request Form</h2>
+      <center><form  id="request-form" action="demo_form.asp">
+        <div class="row"><div class="col-sm-12">Name: </br><input class"input-text" type="text" name="name"></div></div>
+        <div class="row"><div class="col-sm-12">Phone Number: </br<input class"input-text" type="text" name="phone-number"></div>
+        <div class="row"><div class="col-sm-12">Type Of Car: <input class"input-text" type="text" name="type-of-car"></div>
+        <div class="row"><div class="col-sm-12">Special Request: <textarea rows="4" cols="50"></textarea></div>
+        <input id="request-button" type="submit" value="Submit">
+      </form></center>
+    
     </div>
 
   </div>
@@ -122,7 +96,6 @@
       </div>
     </div> 
     </footer>
-
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-modal.js"></script>
