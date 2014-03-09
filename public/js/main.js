@@ -1,92 +1,110 @@
-var PICINDEX = 7;
 var currentPage = window.location.pathname;
 var cars =[];
-if(currentPage.split("gallery")){
-	var x = $.get("getMovies.php", function(obj){
 
-		// console.log(obj);
-		
-		return(obj)
-	}).done(function(){
-		// console.log('done');
-	}).fail(function(){
-		console.log('something went wrong');
-	}).success(function(obj){
-		var carArray =[];
-		var storedCarsArray= [];
-		carArray = obj.trim().split("\n");
-		// console.log(carArray);
-		for(var x= 0; x< carArray.length;x++){
-		var detailArray= carArray[x].split(",");
-		// console.log(detailArray);
-		if($.inArray(detailArray[0], storedCarsArray) ==-1){
+// $(document).load(function(){
+	if(currentPage.split("gallery").length > 1){
+		var x = $.get("getCarPictures2.php", function(obj){
+			return(obj)
+		}).fail(function(){
+			console.log('something went wrong');
+		}).success(function(obj){
+			$('#gallery').html(obj);
+			console.log(obj);
+			$('.galley > input').unveil(null, function(){
+// console.log(pic);
+				$(this).load(function(){
+					$('.galley > input').each(function(index){
+						var pic = $(this);
 
-				var element;
-				if(x==0 || x%5==1){
-					element ='<div class="galley col-sm-4 col-md-3 col-lg-offset-1 col-lg-2">';
-				}else{
-					element= '<div class="galley col-sm-4 col-md-3 col-lg-2">';
-				}
-
-				element+='<input type="image" class="img-responsive" data-id="'+detailArray[0]+'" src="images/' + detailArray[7];
-				element+= '"/></div>';
-				// console.log(element);
-				$('#gallery').append(element);
-				storedCarsArray.push(detailArray[0]);
-			}
-			else{
-				// console.log('is in array!');
-
-			}
-		}
-				// card++;
+						setTimeout( function () {
+							pic.addClass('visible');
+						}, (index * 1000));
+					});
+				});
 			});
 
-}
-else{
-	console.log('false');
-}
 
-$('#gallery').on('click', '.galley input[type="image"]', function(){
-	var id = $(this).attr('data-id');
-	$.get("getOneCar.php", {carId:id},function(obj){
-		
-	}).success(function(obj){
-
-		var detailArray =[];
-		var carArray =[];
-		var picArray= [];
-
-		carArray = obj.trim().split('\n');
-
-		if(carArray.length > 1){
-			var elements ="";
-			// detailArray = carArray[0].split(',');
-			for(var i =0; i < carArray.length; i++){
-
-				detailArray = carArray[i].split(',');
-				// console.log(detailArray);
-				picArray[i] = detailArray[PICINDEX];
-				// console.log(picArray);
-			}
-			// console.log(detailArray);
-			// console.log(picArray);
-			for(var m =0; m < picArray.length; m++){
-				elements += '<div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><img class="img-responsive" src="images/'+picArray[m]+'"/></div>';
-			}
+			// $('#gallery').html(obj);
+			// $('.galley > input').unveil(null,function() {
+			// 	$(this).load(function() {
+			// 		this.style.opacity = 1;
+			// 	});
+			// });
+	});
+		$('#gallery').on('click', '.galley input[type="image"]', function(){
+			var id = $(this).attr('data-id');
+			$.get("getOneCar.php", {carId:id},function(obj){}).success(function(obj){	
+				var detailArray = obj.trim().split('\n');
+				var x = detailArray[0].split(',');
+				var title = x[1];
+				if(detailArray.length > 1){
+					var elements ="";
+					var mainPic ="";
+					for(var m =0; m <detailArray.length; m++){
+						var picArray = detailArray[m].split(',');
+						if(m==0){mainPic = picArray[0]}
+							elements += '<div class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><input type="image" class="img-responsive thumb-nail" src="images/gallery/'+picArray[0]+'"/></div>';
+					}
 			// console.log(elements);
 			$('#insert').html(elements);
-			$('#m-main').html('<img class="img-responsive" src="images/'+picArray[0]+'"/>');
+			$('#m-main').html('<img id="main" class="img-responsive thumb-nail" src="images/gallery/'+mainPic+'"/>');
 		}else{
 			detailArray = obj.trim().split(',');
-			$('#m-main').html('<img class="img-responsive" src="images/'+detailArray[PICINDEX]+'"/>');
+			$('#m-main').html('<img id="main" class="img-responsive thumb-nail" src="images/gallery/'+detailArray[0]+'"/>');
 			$('#insert').html('');
 		}
-		
-		
-		$('#m-title').html('<h1>'+detailArray[1]+'</h1>');		
+
+
+		$('#m-title').html('<h1>'+title+'</h1>');		
 		$('#responsive').modal('show');
 
 	});
-	
+		});
+
+$('#insert').on('click','.thumb-nail',function(){
+	var source=$(this).attr('src');
+	console.log(source);
+	$('#main').attr('src', source);
 });
+}
+else if(currentPage.split("shop").length > 1){
+	$.get("getShopCars.php", function(obj){}).success(function(obj){
+		var detailArray, carArray = [];
+		var element ="";
+
+		carArray = obj.split('\n');
+		for(var count = 0; count<carArray.length;count++){
+			detailArray = carArray[count].split(',');
+			element += '<div class="col-sm-6 col-md-4 col-lg-3"><a href="product.php"><img src="images/shop/'+detailArray[6]+'"/><h4>'+detailArray[2]+'</h4><h5>'+detailArray[4]+'</h5></div>';
+		}
+		$('#store').html(element);
+	});	
+}
+else{
+	console.log('not gallery page');
+}
+
+
+
+// function loadImage(obj, id){
+	
+// 	obj.removeClass('invisible').addClass('visible');
+// 	// $('#gallery').append(element);
+// }
+// var galleryArray = obj.split(",");
+// $('#gallery').append(galleryArray[x]);
+// for(var x = 0; x < galleryArray.length;x++){
+
+// 	var queryEle = $(galleryArray[x].attr('id'));
+// 	var element = "";
+// 	if(x%5==0){
+// 		element+='<div class="galley col-sm-4 col-md-3 col-lg-offset-1 col-lg-2">';
+// 	}
+// 	else{
+// 		element+='<div class="galley col-sm-4 col-md-3 col-lg-2">';
+// 	}
+
+// 	element+=galleryArray[x]+"/></div>";
+// 	$('#gallery').append(queryEle);
+// 	loadImage(queryEle);
+// }

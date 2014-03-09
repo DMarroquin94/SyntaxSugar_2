@@ -1,13 +1,10 @@
 <?php require_once("includes/connection.php");
 
-if(isset($_GET['carId']))
-{
-$carId = $_GET['carId'];
 $moviesToReturn = array();
 $variables ="";
 $data = array();
 
-$cQuery = "SELECT * FROM `Car_pictures` WHERE `carId` = $carId";
+$cQuery = "SELECT DISTINCT c.id, pic.source FROM Car c, Car_pictures pic WHERE c.id = pic.carId group by c.id ORDER BY c.id asc";
 $carQuery = mysqli_query($conn, $cQuery);
 
 
@@ -15,15 +12,22 @@ if(!$carQuery){
 	die("Database query failed: ".mysqli_error($conn));
 }
 else{
+	$count = 0;
 	while($row = $carQuery->fetch_row()){
-		$variables .= "\n".$row[2] .':'.$row[1];
+		if($count%5==0){
+		$variables.='<div class="galley col-sm-4 col-md-3 col-lg-offset-1 col-lg-2">';
+		}
+		else{
+			$variables.='<div class="galley col-sm-4 col-md-3 col-lg-2">';
+		}
+		$variables .= '<input type="image" class="img-responsive"  data-id="'.$row[0].'" data-src="images/gallery/'.$row[1].'" /></div>';
+	
+
+	$count++;
 	}
 	echo $variables;
 }
-}
-else{
-	echo "User Id is null".$_GET['carId'];
-}
-  
+
+ 
 mysqli_close($conn);
 ?>

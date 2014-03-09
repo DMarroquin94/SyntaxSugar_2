@@ -44,6 +44,9 @@ button {
   padding: .2em 15px 0;
   position: relative;
 }
+.col-no-pad {
+  padding: 0;
+}
 .quote {
   color: gray;
   font-size: 90px;
@@ -98,6 +101,15 @@ img.behind {
 #nav-space {
   height: 5em;
   width: 100%;
+}
+.galley > input[type="image"] {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.visible {
+  opacity: 1 !important;
 }
 /** Naviation **/
 .logo {
@@ -422,21 +434,36 @@ em {
 #insert > div {
   margin-top: 1em;
 }
-/** Cart Section **/
+.close {
+  color: whitesmoke;
+  text-shadow: none;
+  opacity: 1;
+  font-size: 14em;
+  margin-top: 0px !important;
+  position: absolute;
+  top: -0.1em;
+  right: 0;
+  outline: none;
+}
+.close:hover {
+  color: #404745;
+}
+/** Cart Section *
 .added {
-  font-size: 14px;
-  color: #5cb85c;
-  line-height: 0;
-  opacity: 0;
-  -webkit-transition: all 0.7s ease-out;
+font-size: 14px;
+color:#5cb85c;
+line-height: 0;
+opacity:0;
+ -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
 }
-.reveal {
-  font-size: 14px;
-  opacity: 1;
-  line-height: 4;
+.reveal{
+	font-size: 14px;
+	opacity:1;
+	line-height: 4;
 }
+
 /** Home stuff **/
 footer li {
   color: #404745;
@@ -462,6 +489,27 @@ li > h3 {
 .galley {
   margin-bottom: 1em;
   margin-top: 1em;
+}
+.galley > input {
+  opacity: 0;
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+}
+/** Shop Section **/
+.sidebar {
+  background: #404745;
+}
+.sidebar li {
+  float: none;
+}
+#store a {
+  width: 100%;
+  height: inherit;
+}
+#store img {
+  background-size: cover;
+  width: inherit;
 }
 /** Do not use. Copy and paste for MOBILE FIRST **/
 @media (min-width: 768px) {
