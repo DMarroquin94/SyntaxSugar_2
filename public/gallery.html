@@ -13,45 +13,41 @@
   <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet">
   <link href="css/bootstrap-modal.css" rel="stylesheet">
   <link href="../css/custom.css" rel="stylesheet"> 
+   <link href="css/style.css" rel="stylesheet">  
 
 </head>
 
-<body id="shop-page">
-  <div id="home">
-    <div class="top-header white">
-     <header id="header_nav" class="container">
-      <!-- <img id="logo" class="img-responsive" src="images/logo.png" /> -->
-    </div>
-    <div class="container">
-      <div id="home" class>
-        <button type="button" class="navbar-toggle menu" data-toggle="collapse" data-target=".navbar-collapse">
+<body id="gallery-page">
+ <header id="header_nav" class="navbar-default" role="navigation">
+  
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better modile display -->
+  <div class"navbar-header">
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-collapse collapse">
-          <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
-
-          </button>
-          <ul id="nav-bar" class="nav navbar-nav mine2 navbar-fixed-top">
-            <!--   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">The Adventure: VRMMO <span class="caret"></span></a> -->
-
-             <!-- <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-             <li><a href="../#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-            <li><a href="../#graphics"><span class="glyphicon glyphicon-picture"></span> Experience</a></li>
-            <li><a href="../#tec-specs"><span class="glyphicon glyphicon-hdd"></span> GameSphere</a></li></ul> -->
-            <li><a href="shop.html"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
-            <li><a href="aboutus.html"><span class="glyphicon glyphicon-user"></span> About Us</a></li>
-            <li><a tabindex="-1" href="support.html"><span class="glyphicon glyphicon-hdd"></span> Support</a></li></ul>
-          </ul>
-
-        </div>
+        <a class="navbar-brand" href="#"> Cars</a>
       </div>
-    </header>
-
-    <div id="nav-space"></div>
+     <img id="logo" class="img-responsive" src="images/transparent_logo.png" />
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  
+  
+    
+      <ul id"nav-bar navbar-collapse collapse">
+          <li><a href="index.html"><span class="glyphicon glyphicon-picture"></span> Home</a></li>
+          <li><a href="shop.html"><span class="glyphicon glyphicon-list-alt"></span> Request</a></li>
+          <li><a href="gallery.html"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+          <li><a href="shop.html"><span class="glyphicon glyphicon-user"></span> Shop</a></li>
+          <li><a tabindex="-1" href="index.html"><span class="glyphicon glyphicon-hdd"></span>Contact</a></li>
+      </ul> 
+    </div>
   </div>
+  </header>
+
   <div id="responsive" class="modal" tabindex="-1" data-width="760" style="display: none;">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -69,34 +65,11 @@
     </div>
   </div>
   <div id="wrap">
-
-    <div class="nav mine header">
-      <div class="navbar-header navbar-fixed-top" role="navigation">
-        <button type="button" class="navbar-toggle menu" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html"><h2 class="logo">Macro Reality</h2></a>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav mine2">
-            <li><a href="home.html"><span class="glyphicon glyphicon-picture"></span> Home</a></li>
-          <li><a href="shop.html"><span class="glyphicon glyphicon-list-alt"></span> Request</a></li>
-          <li><a href="gallery.html"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
-          <li><a href="shop.html"><span class="glyphicon glyphicon-user"></span> Shop</a></li>
-          <li><a tabindex="-1" href="index.html"><span class="glyphicon glyphicon-hdd"></span>Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div id="shop">
       <div class="container store">
+      <!--   <span class="center-block center"><img id="ajax-loader" class="visible" src="images/ajax-loader.gif"/></span> -->
         <div id="gallery" class="row">
         </div>
       </div>
-    </div>
   </div>
   <footer id="footer" class="container">
     <div class="col-sm-4">
@@ -122,6 +95,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-modal.js"></script>
     <script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/jquery.unveil.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
   </html>
