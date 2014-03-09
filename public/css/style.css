@@ -1,6 +1,7 @@
 /*header {
 }
 
+<<<<<<< HEAD
 .container {
 	border: 2px solid black;
 	
@@ -10,7 +11,7 @@
 	
 }*/
 
- ul  {
+/* ul  {
  	float: right;
 	list-style-type: none;
 	margin-right: 2%;
@@ -21,16 +22,16 @@ li  {
 	padding: 0px;
 	margin: 5px;
 
-}
+}*/
 
-body {
+/*body {
 
 }
 h2 {
 	text-align: center;
 	
 
-}
+}*/
 #home-image {
 	border: 2px solid black;
 
@@ -69,6 +70,7 @@ height: auto;
 		display: inline;
 }
 
+/** Homepage Gallery **/
 #gallary {
 	height: auto;
 	padding-bottom: 20px;
@@ -104,21 +106,23 @@ height: auto;
 	
 }
 
-.glyphicon {
+/*.glyphicon {
 	margin-top: 10px
-}
+}*/
 
-.col-sm-10 {
+/*.col-sm-10 {
 	margin: 1, auto;
-}
+}*/
 
 #media-icons {
 	
 }
 
-h3 {
+/*h3 {
 	text-align: center;
-}
+}*/
+
+/** Request Section **/
 #body-request {
 
 	margin-top: 50px;
@@ -126,9 +130,5 @@ h3 {
 }
 
 #request-button {
-	float: right;
-}
-
-#request-form {
-	margin: 0, auto;
+	
 }

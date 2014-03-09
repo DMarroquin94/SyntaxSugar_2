@@ -35,6 +35,10 @@ button {
 .center {
   text-align: center;
 }
+.center-block {
+  margin: 0 auto;
+  display: block;
+}
 .container {
   position: relative;
 }
