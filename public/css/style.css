@@ -1,10 +1,6 @@
 header {
 }
 
-.container {
-	border: 2px solid black;
-	
-}
 
 .logo {
 	
@@ -126,7 +122,7 @@ h3 {
 }
 
 #request-button {
-	float: right;
+	
 }
 
 #request-form {
