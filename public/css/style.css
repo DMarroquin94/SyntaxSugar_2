@@ -24,8 +24,11 @@ body {
 }
 h2 {
 	text-align: center;
-	
+	color: #14A817;
+}
 
+h3 {
+	color: #14A817;
 }
 #home-image {
 	border: 2px solid black;
