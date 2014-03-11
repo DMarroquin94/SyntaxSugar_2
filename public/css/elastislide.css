@@ -24,7 +24,7 @@
 .elastislide-wrapper.elastislide-loading {
 	background-image: url(../images/loading.gif);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center;
 }
 
 .elastislide-horizontal {

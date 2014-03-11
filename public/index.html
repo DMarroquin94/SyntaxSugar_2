@@ -13,7 +13,7 @@
   <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet">
   <link href="css/bootstrap-modal.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet"> 
-
+  <link rel="stylesheet" type="text/css" href="css/elastislide.css">
  <link href="css/style.css" rel="stylesheet">  
 
   </head>
@@ -33,7 +33,7 @@
         </button>
         <a class="navbar-brand" href="#"> Cars</a>
       </div>
-     <img id="logo" class="img-responsive" src="images/transparent_logo.png" />
+     <img id="logo " class="img-responsive" src="images/transparent_logo.png" />
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   
@@ -94,25 +94,93 @@
       </div>
     </div>
 
-    <div id="gallary" class="container">
-      <h2>Gallery</h2>
-      
-     <div class="row"> 
-      <div class="gallary-arrow col-lg-1 col-sm-12">       
-        <span class="glyphicon glyphicon-chevron-left">
-        </span>
-      </div>
+  
 
-      <div class="gallary-thumbnail img-responsive col-lg-2 col-sm-6"><img src="images/car (1)JPG"></div>
-      <div class="gallary-thumbnail img-responsive col-lg-2 col-sm-6"><img src="images/car (1)JPG"></div>
-      <div class="gallary-thumbnail img-responsive col-lg-2 col-sm-6"><img src="images/car (1)JPG"></div>
-      <div class="gallary-thumbnail img-responsive col-lg-2 col-sm-6"><img src="images/car (1)JPG"></div>
-      <div class="gallary-thumbnail img-responsive col-lg-2 col-sm-6"><img src="images/car (1)JPG"></div>
-      <div class="gallary-arrow">
-        <span class="glyphicon glyphicon-chevron-right col-lg-1 col-sm-12">
-        </span>
-      </div>
-    </div>
+
+<!-- start of elastislide carousel -->
+<h2>Gallery</h2>
+<div class="elastislide-wrapper elastislide-horizontal">
+  ::before
+  <div class="elastislide-carousel">
+    <ul id="carousel" class="elastislide-list" style="display: block; max-height: 164px; transition: all 500ms ease-in-out; -webkit-transition: all 500ms ease-in-out;">
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-00-aarons.JPG" alt="image01">
+        </a>
+      </li>
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-02-home-depot.JPG" alt="image01">
+        </a>
+      </li> 
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-1-phoenix.JPG" alt="image01">
+        </a>
+      </li> 
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-12-aaa.JPG" alt="image01">
+        </a>
+      </li> 
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-12-mopar-flotv.JPG" alt="image01">
+        </a>
+      </li> 
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-18-nos.JPG" alt="image01">
+        </a>
+      </li> 
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-32-blu.JPG" alt="image01">
+        </a>
+      </li> 
+      <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-5-go-daddy.JPG" alt="image01">
+        </a>
+      </li> 
+       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-duo-13-and-21.JPG" alt="image01">
+        </a>
+      </li>  
+       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-duo-17-recolor.JPG" alt="image01">
+        </a>
+      </li>  
+       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-duo-39-recolor.JPG" alt="image01">
+        </a>
+      </li>  
+       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-group.JPG" alt="image01">
+        </a>
+      </li>  
+       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-packaging-1.JPG" alt="image01">
+        </a>
+      </li>  
+       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
+        <a hef="#">
+          <img src="images/gallery/car-packaging-2.JPG" alt="image01">
+        </a>
+      </li>          
+    </ul>
+  </div>
+  ::after
+</div>
+<!-- end elastislide carousel -->
+    <!-- < -->
+
+   
   </div>
 
   </div>
@@ -150,6 +218,14 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-modal.js"></script>
   <script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery/jquery.elastislide.js"></script>
+  <script type="text/javascript">
+      
+      $( '#carousel' ).elastislide();
+      
+    </script>
+    <script src="http://tympanus.net/codrops/adpacks/demoad.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

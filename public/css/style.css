@@ -29,9 +29,16 @@ li  {
 }
 h2 {
 	text-align: center;
-	
+	color: #14A817;
+}
+
+
+h3 {
+	color: #14A817;
+}
 
 }*/
+
 #home-image {
 	border: 2px solid black;
 
@@ -44,12 +51,8 @@ h2 {
 	float: left;
 }
 
-#about-us {
-	
+#about-us {	
 height: auto;
-	
-
-	
 }
 
 #about-content {
@@ -93,8 +96,8 @@ height: auto;
 	font-size: 70px;
 }
 
-#body {
-
+#body h2 {
+	text-align: center;
 }
 
 #footer {
