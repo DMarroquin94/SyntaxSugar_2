@@ -18,8 +18,8 @@ else{
   $product['year']=$row[3];
   $product['model']=$row[4];
   $product['price']=$row[5];
-  $product['drive']=$row[6];
-  $product['desc']=$row[7];
+  $product['driver']=$row[6];
+  $product['desc']=$row[8];
 }
 }
 else{
@@ -100,9 +100,15 @@ else{
             <img class="img-responsive" src="images/shop/<?= $product['pic']; ?>" />
           </div>
           <div class="col-sm-8 col-md-6">
-            <h4 class="sub-header"><?= $product['price'] ?></h4>
+            <h4 class="sub-header">$<?= $product['price'] ?></h4>
             <h5><?= $product['year'] ?></h5>
-            <h5><?= $product['model'] ?></h5>
+            <h5>Model: <em><?= $product['model'] ?></em></h5>
+            <h5>Driver: <em><?= $product['driver'] ?></em></h5>
+
+            <p>
+              <?= $product['desc'] ?>
+
+            </p>
           </div>
         </div>
       <!--   <span class="center-block center"><img id="ajax-loader" class="visible" src="images/ajax-loader.gif"/></span> -->

@@ -14,7 +14,8 @@ if(!$carQuery){
 else{
 
 	while($row = $carQuery->fetch_row()){
-		$variables .=implode(',',$row) ."\n";
+		// $variables .=implode(',',$row) ."\n";
+		$variables .= $row[0].','.$row[1].','.$row[2].','.$row[3].','.$row[4].','.$row[5].','.$row[6]."\n";
 	}
 	// echo var_dump($carQuery);
 }

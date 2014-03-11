@@ -15,7 +15,7 @@ var cars =[];
 
 						setTimeout( function () {
 							pic.addClass('visible');
-						}, (index * 600));
+						}, (index * 550));
 					});
 				});
 			});
