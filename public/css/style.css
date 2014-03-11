@@ -51,12 +51,8 @@ h3 {
 	float: left;
 }
 
-#about-us {
-	
+#about-us {	
 height: auto;
-	
-
-	
 }
 
 #about-content {
@@ -100,8 +96,8 @@ height: auto;
 	font-size: 70px;
 }
 
-#body {
-
+#body h2 {
+	text-align: center;
 }
 
 #footer {
