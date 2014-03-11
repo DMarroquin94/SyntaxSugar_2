@@ -1,7 +1,6 @@
 var currentPage = window.location.pathname;
 var cars =[];
 
-// $(document).load(function(){
 	if(currentPage.split("gallery").length > 1){
 		var x = $.get("getCarPictures2.php", function(obj){
 			return(obj)
@@ -9,34 +8,26 @@ var cars =[];
 			console.log('something went wrong');
 		}).success(function(obj){
 			$('#gallery').html(obj);
-			console.log(obj);
 			$('.galley > input').unveil(null, function(){
-// console.log(pic);
 				$(this).load(function(){
 					$('.galley > input').each(function(index){
 						var pic = $(this);
 
 						setTimeout( function () {
 							pic.addClass('visible');
-						}, (index * 1000));
+						}, (index * 600));
 					});
 				});
 			});
-
-
-			// $('#gallery').html(obj);
-			// $('.galley > input').unveil(null,function() {
-			// 	$(this).load(function() {
-			// 		this.style.opacity = 1;
-			// 	});
-			// });
 	});
 		$('#gallery').on('click', '.galley input[type="image"]', function(){
 			var id = $(this).attr('data-id');
 			$.get("getOneCar.php", {carId:id},function(obj){}).success(function(obj){	
 				var detailArray = obj.trim().split('\n');
+				console.log(detailArray);
 				var x = detailArray[0].split(',');
 				var title = x[1];
+				console.log(x);
 				if(detailArray.length > 1){
 					var elements ="";
 					var mainPic ="";
@@ -70,14 +61,16 @@ $('#insert').on('click','.thumb-nail',function(){
 else if(currentPage.split("shop").length > 1){
 	$.get("getShopCars.php", function(obj){}).success(function(obj){
 		var detailArray, carArray = [];
-		var element ="";
-
-		carArray = obj.split('\n');
+		var element ="<div class='row'>";
+		console.log(obj);
+		carArray = obj.trim().split('\n');
 		for(var count = 0; count<carArray.length;count++){
-			detailArray = carArray[count].split(',');
-			element += '<div class="col-sm-6 col-md-4 col-lg-3"><a href="product.php"><img src="images/shop/'+detailArray[6]+'"/><h4>'+detailArray[2]+'</h4><h5>'+detailArray[4]+'</h5></div>';
+			detailArray = carArray[count].trim().split(',');
+			var price = detailArray[4]%1 ==0;
+			element += '<div class="col-sm-6 col-md-4 col-lg-3"><a href="product.php?carId='+detailArray[0]+'"><img src="images/shop/'+detailArray[6]+'"/><h4>'+detailArray[1]+'</h4><h5>$'+detailArray[4]+'</h5></div>';
 		}
-		$('#store').html(element);
+		element += "</div>";
+		$('#store').append(element);
 	});	
 }
 else{

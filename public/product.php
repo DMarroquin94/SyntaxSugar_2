@@ -1,3 +1,32 @@
+<?php require_once("includes/connection.php");
+
+$product;
+if(isset($_GET['carId']))
+{
+$carId = $_GET['carId'];
+$cQuery = "SELECT DISTINCT pic.source,  c.* FROM Car c, Car_pictures pic WHERE c.id = $carId and c.id = pic.carId group by c.id";
+$carQuery = mysqli_query($conn, $cQuery);
+if(!$carQuery){
+  die("Database query failed: ".mysqli_error($conn));
+}
+else{
+  $row = $carQuery->fetch_row();
+  $product = [];
+  $product['pic']=$row[0];
+  $product['id'] = $row[1];
+  $product['name'] = $row[2];
+  $product['year']=$row[3];
+  $product['model']=$row[4];
+  $product['price']=$row[5];
+  $product['drive']=$row[6];
+  $product['desc']=$row[7];
+}
+}
+else{
+  echo 'No car id set';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,24 +79,32 @@
 
   <div id="wrap">
 
-  	<div id="side-navbar" class="col-sm-3 col-md-2 sidebar col-no-pad visible-md visible-lg">
-  		<h6 class="page-header">Main Links</h6>
-      		<ul>
-      			<li><a href="#">Link 1</a></li>
-      			<li><a href="#">Link 1</a></li>
-      			<li><a href="#">Link 1</a></li>
-      			<li><a href="#">Link 1</a></li>
-      			<li><a href="#">Link 1</a></li>
-      			<li><a href="#">Link 1</a></li>
-      			<li><a href="#">Link 1</a></li>
-      		</ul>
+    <div id="side-navbar" class="col-sm-3 col-md-2 sidebar col-no-pad visible-md visible-lg">
+      <h6 class="page-header">Main Links</h6>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 1</a></li>
+          </ul>
 
-      	</div>
+        </div>
       <div class="container">
-      	<div id="store" class="row">
-      		<h3 class="page-header">Diecast Shop</h3>
-
-      	</div>
+        <h3 class="page-header"><?= $product['name'] ?></h3>
+        <div id="product" class="row">
+          
+          <div class="col-sm-4 col-md-6">
+            <img class="img-responsive" src="images/shop/<?= $product['pic']; ?>" />
+          </div>
+          <div class="col-sm-8 col-md-6">
+            <h4 class="sub-header"><?= $product['price'] ?></h4>
+            <h5><?= $product['year'] ?></h5>
+            <h5><?= $product['model'] ?></h5>
+          </div>
+        </div>
       <!--   <span class="center-block center"><img id="ajax-loader" class="visible" src="images/ajax-loader.gif"/></span> -->
       </div>
   </div>

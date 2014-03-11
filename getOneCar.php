@@ -15,14 +15,16 @@ if(!$carQuery){
 	die("Database query failed: ".mysqli_error($conn));
 }
 else{
+	// $row = $carQuery->fetch_row();
 while($row = $carQuery->fetch_row()){
-		$variables .= "\n".$row[0].','.$row[1];
+	echo implode(',',$row) ."\n";
+		// $variables .= $row[0].','.$row[1] . "\n";
 	}
-	echo $variables;
+
 }
 }
 else{
-	echo "User Id is null".$_GET['carId'];
+	echo "Car Id is null".$_GET['carId'];
 }
   
 mysqli_close($conn);

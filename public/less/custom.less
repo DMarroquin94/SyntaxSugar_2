@@ -37,19 +37,29 @@ h1,h2,h3,h4,h5,h6{
 		font-family:@logoFont;
 	}
 }
+h3{
+	&.page-header{
+		font-size: 4em;
+	}
+}
+h4{
+	&.sub-header{
+		font-size: 2.2em;
+		padding: .4em;
+		background: pink;
+		margin: 0 0 1em;
+	}
+}
+h6{
+	font-size: 1.7em;
+}
+
+
 a{
 	font-family:@MainFont;
 }
 button{
 	font-family: @MainFont;
-}
-
-.center{
-	text-align:center;
-}
-.center-block {
-	margin: 0 auto;
-	display:block;
 }
 .container{
 	position:relative
@@ -60,9 +70,7 @@ button{
 	padding: .2em 15px 0;
 	position:relative;
 }
-.col-no-pad{
-	padding:0;
-}
+
 .quote{
 	color: gray;
 	font-size: 90px;
@@ -74,7 +82,6 @@ button{
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto 2em;
 }
 img.behind {
 	width: 38% !important;
@@ -83,7 +90,17 @@ img.behind {
 	position: relative;
 	display: block;
 }
-
+/** Reusable classes **/
+.center{
+	text-align:center;
+}
+.center-block {
+	margin: 0 auto;
+	display:block;
+}
+.col-no-pad{
+	padding:0;
+}
 .depth {
 	display: block;
     // padding: 10px;
@@ -113,10 +130,8 @@ img.behind {
 .navbar-nav{
 	margin:0;
 }
-#nav-space{
-	height:5em;
-	width:100%;
-}
+/*****  ******/
+
 .galley > input[type="image"]{
 	opacity:0;
 	-webkit-transition: all 0.5s ease-out;
@@ -150,36 +165,6 @@ img.behind {
 		float:right;
 	}
 }
-@media (min-width: 768px) {
-	.top-header .mine2 {
-		position: relative;
-	}
-}
-
-@media (min-width: 992px) {
-	.top-header .mine2 {
-		position: absolute;
-		top: 0;
-		right: 0em;
-	}
-}
-
-@media (min-width: 1200px) {
-	.top-header .mine2 {
-		position: absolute;
-		top: 0;
-		right: 0em;
-	}
-}
-.top-header li{
-	float:none;
-}
-@media (min-width: 768px) {
-	.top-header li {
-		position: relative;
-		float:left;
-	}
-}
 .nav{
 	font-size: 14px;
 }
@@ -200,8 +185,7 @@ img.behind {
 }
 
 .navbar-brand{
-	padding: 0 0 10px;
-
+	padding: .7em;
 	h2{
 		font-size:13px;
 	}
@@ -224,11 +208,20 @@ button.circle{
 		color:@triarycolor;
 	}
 }
-.solid{
-	background:@bgcolor;
-}
 .icon-bar{
 	background:@accent;
+}
+#top-nav{
+	ul{
+		list-style-type: none;
+		float:right;
+		margin-bottom: 0;
+	}
+	li{
+		float:left;
+		padding:1.2em;
+		font-size: 1.2em;
+	}
 }
 
 /** Hero image **/
@@ -565,21 +558,40 @@ li>h3 {
 /** Shop Section **/
 .sidebar{
 	background:@secondarycolor;
+	padding: 3em 0em;
 	li{
 		float:none;
+		padding: 1em 0;
+		list-style-type: none;
+		font-size: 1.2em;
 	}
 
 }
+#side-navbar{
+
+	.page-header {
+		padding: 0 34px .1em;
+	}
+}
 #store{
-	a{
+
+	a{	
 		width: 100%;
 		height: inherit;
+
+		&:hover{
+			text-decoration: none;
+		}
 	}
 	img{
 		background-size: cover;
 		width: inherit;
 	}
+	
+
 }
+
+
 
 
 /** Do not use. Copy and paste for MOBILE FIRST **/
