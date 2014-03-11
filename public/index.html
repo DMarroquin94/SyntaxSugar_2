@@ -18,28 +18,35 @@
 
   </head>
 
-  <body>
+  <body class="index-background">
 
  <header id="header_nav" class="navbar-default navbar-fixed-top" role="navigation">
   
 <div class="container-fluid">
   <!-- Brand and toggle get grouped for better modile display -->
-  <div class"navbar-header">
-   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+ 
+  <div class"navbar-header col-lg-4">
+   <button type="button" class="navbar-toggle menu" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"> Cars</a>
+        <a id="logo-text" class="navbar-brand" href="#"> Cars</a>
       </div>
-     <img id="logo " class="img-responsive" src="images/transparent_logo.png" />
+     <img id="logo" class="img-responsive" src="images/transparent_logo.png" />
+     <ul class="social-media">
+      <li>facebook</li>
+      <li>twitter</li>
+    </ul>
+  
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   
   
     
-      <ul id"nav-bar navbar-collapse collapse">
+      <ul id"nav-bar navbar-dropdown dropdown">
           <li><a href="index.html"><span class="glyphicon glyphicon-picture"></span> Home</a></li>
           <li><a href="request.html"><span class="glyphicon glyphicon-list-alt"></span> Request</a></li>
           <li><a href="gallery.html"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
@@ -50,11 +57,20 @@
   </div>
   </header>
 
-  <div id="home-image">
-    <img id="logo" class="" src="images/car.jpg"/>
-  </div>
+ 
+    <div class="jumbotron hero-image">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to"1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <img  class="behind" src="images/hero-image2.jpg"/>
+          </div>
+          </div>
+    </div>
 
-  <div id="body">
+  <div id="index-body">
     <div id="about-us" class="container">
       <h2>About Us</h2>
       <div id="about-content" class="row">
@@ -64,10 +80,6 @@
             College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum." 
           </p>
       </div>
-
-       <div class="row">
-        <p>
-       </div> 
 
         <div class="row">
           <div id="about-img" class="col-lg-4  col-md-4 col-sm-12 img-responsive">
@@ -92,17 +104,15 @@
                piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up on
             </p> 
       </div>
-    </div>
-
-  
 
 
-<!-- start of elastislide carousel -->
 <h2>Gallery</h2>
+<!-- end elastislide carousel -->
+
 <div class="elastislide-wrapper elastislide-horizontal">
   ::before
   <div class="elastislide-carousel">
-    <ul id="carousel" class="elastislide-list" style="display: block; max-height: 164px; transition: all 500ms ease-in-out; -webkit-transition: all 500ms ease-in-out;">
+    <ul id="carousel" class="elastislide-list" style="display: block; max-height: 164px; transition: all 500ms ease-in-out; -webkit-transition: all 500ms ease-in-out; -webkit-transfrom: translateX(0px);">
       <li style="width: 33.24061196105702%; max-width: 154px; max-height: 164px;">
         <a hef="#">
           <img src="images/gallery/car-00-aarons.JPG" alt="image01">
@@ -175,10 +185,14 @@
       </li>          
     </ul>
   </div>
+  <nav>
+      <span class="elastislide-prev" style="display: none;">Previous</span>
+      <span class="elastislide-next" style="display: block;">Next</span>
+  </nav>
   ::after
 </div>
-<!-- end elastislide carousel -->
-    <!-- < -->
+<!-- end of elastislide carousel -->
+
 
    
   </div>
@@ -187,8 +201,8 @@
   <footer id="footer" class="container">
    
 <div id="row"> 
-    <div class="col-lg-4 col-sm-4">
-      <ul style="list-style-type:none;">
+    <div class="col-lg-12 col-sm-12">
+      <ul class="footer-ul">
         <li>
         &copy; MacroReality Virtual Gaming 2014
       </li>
@@ -196,21 +210,8 @@
       <li><span class="glyphicon glyphicon-envelope"></span> MacroRealityInc@macroreality.com</li>
     </ul>
       </div>
-      <div class="col-lg-4 col-sm-4">
-        <h3><em>Address</em>:</h3>
-        <ul style="list-style-type:none; font-size:12px;">
-        <li></li>
-         <li>260 Linden St</li>
-         <li>San Francisco, CA 94102</li>
-      </ul></div>
+  
 
-      <div class="col-lg-4 col-sm-4" id="social-icons">
-        <h3>Follow Us</h3>
-        <ul id="media-icons">
-          <li><span class="">Follow us!</span></li>
-          <li><span class="">Stay updated!</span></li>
-        </ul>
-      </div>
     </div> 
     </footer>
 
@@ -218,14 +219,8 @@
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/bootstrap-modal.js"></script>
   <script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script type="text/javascript" src="jquery/jquery.elastislide.js"></script>
-  <script type="text/javascript">
-      
-      $( '#carousel' ).elastislide();
-      
-    </script>
-    <script src="http://tympanus.net/codrops/adpacks/demoad.js"></script>
+  <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+
   <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
