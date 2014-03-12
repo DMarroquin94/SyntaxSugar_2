@@ -134,14 +134,25 @@ background-color: #fcf6d1;
 
 #index-body h2, #request h2 {
 	text-align: center;
-	color: #7ecf38;
+	color: black;
 }
+
+
+.footer-form {
+	height: auto;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	margin-top: 35em;
+}
+
 
 
 #footer {
 	height: auto;
 	text-align: center;
 }
+
 
 
 .footer-ul {
@@ -179,7 +190,7 @@ background-color: #fcf6d1;
 /** Request Section **/
 #body-request {
 
-	margin-top: 50px;
+	margin-top: 15em;
 	height: auto;
 }
 
@@ -210,12 +221,9 @@ footer a {
 	color: #7ecf38;
 }
 
-
-input:focus{
-
-	border: 2px solid white;
+.center-block {
+	margin: 0 auto;
 }
 
-#request-button {
-	background-color: #7ecf38;
-}
+
+
